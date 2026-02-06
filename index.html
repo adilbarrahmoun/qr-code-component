@@ -8,73 +8,106 @@
   
   <title>Frontend Mentor | QR code component</title>
   <style>
-  *{
+   /* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
 }
 
-body{
+/* Body */
+body {
+  font-family: 'Outfit', sans-serif;
   background-color: hsl(212, 45%, 89%);
-}
+  min-height: 100vh;
 
-.container{
-  background-color: white;
-  padding: 50px;
-  margin: 5% 25% 5% 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: auto;
-  border-radius: 20px;
 }
 
-.container-image{
-  background-image: url('images/image-qr-code.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 50%;
-  overflow: hidden;
+/* Card */
+.card {
+  background-color: white;
   border-radius: 20px;
-}
-
-section{
-  padding: 5%;
+  padding: 16px;
+  max-width: 320px;
   text-align: center;
+
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08);
 }
 
-h1{
-  color: hsl(218, 44%, 22%);
+/* Image */
+.qr-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.title {
+  font-size: 22px;
   font-weight: 700;
+  color: hsl(218, 44%, 22%);
+  margin-bottom: 15px;
 }
 
-p{
-  color: hsl(216, 15%, 48%);
-  padding: 5%;
+/* Description */
+.description {
   font-size: 15px;
-  font-weight: 400;
+  color: hsl(216, 15%, 48%);
+  line-height: 1.5;
 }
 
-/* Mobile view */
-@media(max-width: 768px){
-  .container{
-    margin: 5% 10% 5% 10%;
-    padding: 10px;
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Desktop tweak */
+@media (min-width: 768px) {
+  .card {
+    max-width: 350px;
   }
 }
+
   </style>
 </head>
 <body>
-   <div class="container">
-    <div class="container-image" role="img" aria-label="QR code">
-      <!-- <img src="images/image-qr-code.png" alt="" class="container-image"> -->
-    </div>
-    <section>
-      <h1>Improve your front-end skills by building projects</h1>
-      <p>
-        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-      </p>
-    </section>
+   <main class="card">
+    <img
+      src="./images/image-qr-code.png"
+      alt="QR code"
+      class="qr-image"
+    />
+
+    <h1 class="title">
+      Improve your front-end skills by building projects
+    </h1>
+
+    <p class="description">
+      Scan the QR code to visit Frontend Mentor and take your coding skills to
+      the next level
+    </p>
+     <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Adil Barrahmoun</a>.
   </div>
+  </main>
+
+ 
 </body>
 </html>
